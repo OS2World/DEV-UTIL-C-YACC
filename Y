@@ -1,0 +1,49 @@
+.c.obj:
+cl -Lr -AL -W3 -G2 -c $*.c
+
+.1c.obj:
+cl -Lr -AL -W3 -G2 -c -Tc $*.1c
+
+.2c.obj:
+cl -Lr -AL -W3 -G2 -c -Tc $*.2c
+
+.3c.obj:
+cl -Lr -AL -W3 -G2 -c -Tc $*.3c
+
+.4c.obj:
+cl -Lr -AL -W3 -G2 -c -Tc $*.4c
+
+YAPACK.obj: YAPACK.3c
+
+YG2GEN.obj: YG2GEN.3c
+
+YG2OUT.obj: YG2OUT.3c
+
+YHDPRD.obj: YHDPRD.3c
+
+YOUTPT.obj: YOUTPT.3c
+
+YPRCFT.obj: YPRCFT.3c
+
+YWARRY.obj: YWARRY.3c
+
+YWRACT.obj: YWRACT.3c
+
+YWSTAT.obj: YWSTAT.3c
+
+YAOPUT.obj: YAOPUT.4c
+
+YCLOPT.obj: YCLOPT.4c
+
+YGIN.obj: YGIN.4c
+
+YGTNM.obj: YGTNM.4c
+
+YNXTI.obj: YNXTI.4c
+
+YOSMRY.obj: YOSMRY.4c
+
+YSTIN.obj: YSTIN.4c
+
+YAROUT.obj: YAROUT.4c
+

@@ -1,0 +1,52 @@
+/*
+  HEADER: CUG	 nnn.nn;
+  TITLE:	 YACC - Yet Another Compilier-Compilier
+  VERSION:	 1.0 for IBM-PC
+  DATE: 	 JAN 28, 1985
+  DESCRIPTION:	 LALR(1) Parser Generator. From UNIX
+  KEYWORDS:	 Parser Generator Compilier-Compilier YACC
+  SYSTEM:	 IBM-PC and Compatiables
+  FILENAME:      YWRITM.1C
+  WARNINGS:	 This program is not for the casual user. It will
+		 be useful primarily to expert developers.
+  CRC:		 N/A
+  SEE-ALSO:	 LEX and PREP
+  AUTHORS:	 Scott Guthery 11100 leafwood lane Austin, TX 78750
+  COMPILERS:	 DESMET-C
+  REFERENCES:	 UNIX Systems Manuals
+*/
+
+#include "y1.h"
+
+extern char sarr[ISIZE];
+
+char *writem(int *pp)
+
+   {
+   /* creates output string for item pointed to by pp */
+   int i,*p;
+   char *q;
+
+   for( p=pp; *p>0 ; ++p ) ;
+   p = prdptr[-*p];
+   q = chcopy( sarr, nontrst[*p-NTBASE].name );
+   q = chcopy( q, " : " );
+
+   for(;;)
+      {
+      *q++ = (char) ( ++p==pp ? '_' : ' ' );
+      *q = '\0';
+      if((i = *p) <= 0) break;
+      q = chcopy( q, symnam(i) );
+      if( q> &sarr[ISIZE-30] ) error( "item too big" );
+      }
+
+   if( (i = *pp) < 0 )
+      {
+      /* an item calling for a reduction */
+      q = chcopy( q, "    (" );
+      sprintf( q, "%d)", -i );
+      }
+
+   return( sarr );
+   }

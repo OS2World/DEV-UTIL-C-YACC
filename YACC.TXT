@@ -1,0 +1,83 @@
+/*
+  HEADER: CUG	 nnn.nn;
+  TITLE:	 YACC - Yet Another Compilier-Compilier
+  VERSION:	 1.0 for IBM-PC
+  DATE: 	 JAN 28, 1985
+  DESCRIPTION:	 LALR(1) Parser Generator. From UNIX
+  KEYWORDS:	 Parser Generator Compilier-Compilier YACC
+  SYSTEM:	 IBM-PC and Compatiables
+  FILENAME:      YACC.DOC
+  WARNINGS:	 This program is not for the casual user. It will
+		 be useful primarily to expert developers.
+  CRC:		 N/A
+  SEE-ALSO:	 LEX and PREP
+  AUTHORS:	 Scott Guthery 11100 leafwood lane Austin, TX 78750
+  COMPILERS:	 DESMET-C
+  REFERENCES:	 UNIX Systems Manuals
+*/
+
+        yacc -- LALR(1) Parser Generator
+
+
+        NAME:  yacc - LALR(1) Parser Generator
+
+        SYNOPSIS:
+
+                yacc [options] file
+
+        DESCRIPTION:
+
+                Yacc is the full UNIX V7 LALR(1) parser generator.  This
+                version has smaller allocations for the work tables, but
+                is otherwise exactly  the  UNIX  version.   For  further
+                documentation  on the use and operation of yacc, see the
+                UNIX documentation.  The following options are defined:
+
+                -h              Generate "file.H" containing  the  token
+                                code  #defines for your lexical analyzer
+                                to #include.
+
+                -i              Generate "file.I" containing a  descrip-
+                                tion   of   the   parser   as   to   the
+                                shift-reduce  actions,  and  a  set   of
+                                informative statistics about parser con-
+                                struction.
+
+        DIAGNOSTICS:
+
+                Usage ...
+
+                        Illegal  options  cause  an   extensive   "help"
+                        message to be printed.
+
+                Many other fairly descriptive error messages.
+
+        BUGS:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
